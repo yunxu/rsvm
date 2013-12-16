@@ -1,0 +1,20 @@
+#! /bin/bash
+
+File_Log=$0.log
+JobName=$rdsvm_learn.q
+
+echo "
+#! /bin/bash
+
+#$ -N rdsvm_learn_64
+#$ -S /bin/bash
+#$ -o $File_Log
+#$ -j y 
+#$ -M yunxu
+#$ -m be
+#$ -cwd
+
+time ./rdsvm_learn_64 
+"  >  $JobName
+qsub $JobName
+rm -f $JobName

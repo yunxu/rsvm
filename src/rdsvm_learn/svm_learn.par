@@ -1,0 +1,23 @@
+#positive-set: v440.native             #feature data file of positive set
+#negative-set: v440.decoy              #feature data file of negative set
+#output-model-file: v440.model         #model file 
+#-----------------------
+positive-set: native.sub             #feature data file of positive set
+negative-set: decoy.sub              #feature data file of negative set
+output-model-file: sub.model         #model file 
+auto-scaling: 1   # 0 - no auto-scaling; 
+                  # 1 - auto-scaling with assigned average and stand deviation  
+                  # as stored in average_sd.dat
+                  # 2 - auto-scaling within the training set and write a average_sd.dat file
+                  # option 2 do not need to be set there, because I write it another program to
+                  # get it
+model:  1         # 0 -  linear; 1 - radius based function kernel;
+gamma-value: 0.0001     # needed when  model is 1 !
+j-value:   1      # default;
+nu: 10000  #
+p_rate: 0.6  #
+n_rate: 0.4  #
+stop_criteria: 1.0e-8 #
+b-value:   1      # default;
+visibility: 1      # default;
+debug: 1 # 1 show more information, 0 show little information
